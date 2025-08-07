@@ -7,51 +7,106 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+
   <header>
-    <div class="logo">🧶 Crochet Dreams</div>
-    <nav>
-      <ul>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container nav-container">
+      <div class="logo">🧶 Crochet Dreams</div>
+      <div class="burger" id="burger">&#9776;</div>
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
-    <h1>Handmade With Love</h1>
-    <p>Wrap yourself in warmth and art</p>
-    <a href="#gallery" class="cta">Explore Gallery</a>
-  </section>
-
-  <section id="gallery" class="gallery">
-    <h2>Our Creations</h2>
-    <div class="grid">
-      <img src="https://source.unsplash.com/300x300/?crochet,art" alt="crochet 1" />
-      <img src="https://source.unsplash.com/301x301/?yarn,crochet" alt="crochet 2" />
-      <img src="https://source.unsplash.com/302x302/?crochet,design" alt="crochet 3" />
-      <img src="https://source.unsplash.com/303x303/?knitting,handmade" alt="crochet 4" />
+    <div class="container">
+      <h1>Stitched with Love</h1>
+      <p>Cozy. Handmade. Yours.</p>
+      <a href="#gallery" class="cta">View Gallery</a>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We are a small collective of crochet artists creating cozy, customized, and eco-friendly items. Each piece tells a story stitched with care and creativity.</p>
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img src="https://img.icons8.com/pastel-glyph/64/yarn-ball.png" alt="Yarn">
+          <h3>Natural Yarns</h3>
+          <p>Soft-touch and eco-conscious.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/pastel-glyph/64/needle.png" alt="Needle">
+          <h3>Handcrafted</h3>
+          <p>Lovingly made by artists.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/pastel-glyph/64/heart--v1.png" alt="Heart">
+          <h3>Made with Love</h3>
+          <p>Each item has a story.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <p>Pick a pattern.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <p>Customize it.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <p>We ship it!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://fastly.picsum.photos/id/14/200/300.jpg?hmac=FMdb1SH_oeEo4ibDe66-ORzb8p0VYJUS3xWfN3h2qDU" alt="crochet 1" class="gallery-img"/>
+        <img src="https://fastly.picsum.photos/id/14/200/300.jpg?hmac=FMdb1SH_oeEo4ibDe66-ORzb8p0VYJUS3xWfN3h2qDU" alt="crochet 2" class="gallery-img"/>
+        <img src="https://fastly.picsum.photos/id/14/200/300.jpg?hmac=FMdb1SH_oeEo4ibDe66-ORzb8p0VYJUS3xWfN3h2qDU" alt="crochet 3" class="gallery-img"/>
+        <img src="https://fastly.picsum.photos/id/14/200/300.jpg?hmac=FMdb1SH_oeEo4ibDe66-ORzb8p0VYJUS3xWfN3h2qDU" alt="crochet 4" class="gallery-img"/>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Email" required/>
-      <textarea placeholder="Your message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Crochet Dreams</p>
+    <p>© 2025 Crochet Dreams. All rights stitched with love.</p>
   </footer>
+
+  <!-- Image Modal Viewer -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Full View" />
+  </div>
 
   <script src="./script.js"></script>
 </body>
