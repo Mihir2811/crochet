@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crochet Dreams</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-    Hello, this is the crochet index page.
-    <p>Welcome to the world of crochet!</p>
+  <header>
+    <div class="logo">🧶 Crochet Dreams</div>
+    <nav>
+      <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Handmade With Love</h1>
+    <p>Wrap yourself in warmth and art</p>
+    <a href="#gallery" class="cta">Explore Gallery</a>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Our Creations</h2>
+    <div class="grid">
+      <img src="https://source.unsplash.com/300x300/?crochet,art" alt="crochet 1" />
+      <img src="https://source.unsplash.com/301x301/?yarn,crochet" alt="crochet 2" />
+      <img src="https://source.unsplash.com/302x302/?crochet,design" alt="crochet 3" />
+      <img src="https://source.unsplash.com/303x303/?knitting,handmade" alt="crochet 4" />
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a small collective of crochet artists creating cozy, customized, and eco-friendly items. Each piece tells a story stitched with care and creativity.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Email" required/>
+      <textarea placeholder="Your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Crochet Dreams</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
