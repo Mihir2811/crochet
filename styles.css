@@ -301,3 +301,20 @@ footer {
   font-weight: bold;
   color: var(--main-color);
 }
+
+footer .social-icon {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+footer .social-icon img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+footer .social-icon img:hover {
+  filter: none;
+}
+
