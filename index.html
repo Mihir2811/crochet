@@ -20,6 +20,7 @@
           <li><a href="#how">How It Works</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#reviews">Reviews</a></li>
         </ul>
       </nav>
     </div>
@@ -28,7 +29,7 @@
   <section class="hero">
     <div class="container">
       <h1>Stitched with Love</h1>
-      <p>Cozy. Handmade. Yours.</p>
+      <p>Cozy. Handmade. Customized.</p>
       <a href="#gallery" class="cta">View Gallery</a>
     </div>
   </section>
@@ -91,16 +92,16 @@
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Tell us your crochet need... " required></textarea>
+      <form id="contact-form" action="https://formspree.io/f/xrblodpe" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Tell us your crochet need..." required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
 
-  <section class="reviews">
+  <section id="reviews" class="reviews">
   <div class="container">
     <h2>What Our Customers Say</h2>
     <div class="review-grid">
