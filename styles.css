@@ -128,7 +128,7 @@ header.scrolled .burger {
 /* Hero */
 .hero {
   padding: 5rem 0;
-  background: linear-gradient(to bottom, #ffc8dd, #ffafcc);
+  background: linear-gradient(to bottom, #fff4f7, #ffeef2); /* soft pink-white gradient */
   text-align: center;
 }
 
