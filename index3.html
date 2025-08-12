@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>The Threaded Florals By Mahekk</title>
+  <link rel="stylesheet" href="./styles2.css" />
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="container nav-container">
+      <div class="logo">The Threaded Florals By Mahekk</div>
+      <div class="burger" id="burger">&#9776;</div>
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Stitched with Love</h1>
+      <p>Cozy. Handmade. Customized.</p>
+      <a href="#gallery" class="cta">View Gallery</a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img src="https://img.icons8.com/?size=100&id=uVIEdWZSAVDE&format=png&color=000000" alt="Yarn">
+          <h3>Natural Yarns</h3>
+          <p>Soft-touch and eco-conscious.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/?size=100&id=uVIEdWZSAVDE&format=png&color=000000" alt="Needle">
+          <h3>Handcrafted</h3>
+          <p>Lovingly made by artists.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://img.icons8.com/?size=100&id=uVIEdWZSAVDE&format=png&color=000000" alt="Heart">
+          <h3>Made with Love</h3>
+          <p>Each item has a story.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <p>Pick a pattern.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <p>Customize it.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <p>We ship it!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="./IMG_0229.jpeg" class="gallery-img" alt="crochet 1" />
+        <img src="./IMG_0230.jpeg" class="gallery-img" alt="crochet 2" />
+        <img src="./IMG_0229.jpeg" class="gallery-img" alt="crochet 3" />
+        <img src="./IMG_0230.jpeg" class="gallery-img" alt="crochet 4" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form" action="https://formspree.io/f/xrblodpe" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Tell us your crochet need..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <p>"Absolutely loved the quality and warmth!"</p>
+        <div class="stars">★★★★★</div>
+        <span>- Anika</span>
+      </div>
+      <div class="review-card">
+        <p>"Feels handmade with care. Worth every penny."</p>
+        <div class="stars">★★★★☆</div>
+        <span>- Rohan</span>
+      </div>
+      <div class="review-card">
+        <p>"Charming designs and fast delivery!"</p>
+        <div class="stars">★★★★★</div>
+        <span>- Mahi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2025 The Threaded Florals By Mahekk. All rights stitched with love.</p>
+    <a href="https://www.instagram.com/thethreadedflorals" target="_blank" class="social-icon">
+    <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" />
+  </a>
+  </footer>
+
+  <!-- Image Viewer Drawer -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Full View" />
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

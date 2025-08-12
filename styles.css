@@ -160,7 +160,6 @@ header.scrolled .burger {
 /* Features */
 .features {
   padding: 3rem 0;
-  background: linear-gradient(to bottom, #FFF5E4, #FFE3E1);
   text-align: center;
   position: relative;
 }
@@ -184,10 +183,10 @@ header.scrolled .burger {
 }
 
 .feature-card {
-  background: white;
+  background: transparent;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: none;
   margin-bottom: -20px;
   position: relative;
   z-index: 2;
@@ -392,3 +391,4 @@ footer .social-icon img {
     padding-left: 1rem;
   }
 }
+
