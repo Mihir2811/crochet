@@ -263,8 +263,8 @@
       border-color: var(--primary-color);
     }
 
-    /* ===== FEATURES SECTION STYLES ===== */
-    .features {
+    /* ===== MENU SECTION STYLES ===== */
+    .menu {
       padding: 4rem 0;
       text-align: center;
       position: relative;
@@ -272,7 +272,7 @@
     }
 
     /* Decorative curved background */
-    .features::before {
+    .menu::before {
       content: '';
       position: absolute;
       top: -80px;
@@ -284,25 +284,35 @@
       z-index: -1;
     }
 
-    .features h2 {
+    .menu h2 {
       font-size: 2.5rem;
       color: var(--secondary-color);
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       font-weight: 700;
     }
 
-    /* Grid layout for feature cards */
-    .feature-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      margin-top: 2rem;
+    .menu-subtitle {
+      font-size: 1.3rem;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+      font-style: italic;
     }
 
-    /* Individual feature card styling */
-    .feature-card {
+    /* Grid layout for menu items */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Individual menu item styling */
+    .menu-item {
       background: rgba(255, 255, 255, 0.8);
-      padding: 2.5rem 2rem;
+      padding: 2rem 1.5rem;
       border-radius: var(--border-radius);
       box-shadow: var(--shadow-light);
       transition: var(--transition);
@@ -312,7 +322,7 @@
       overflow: hidden;
     }
 
-    .feature-card::before {
+    .menu-item::before {
       content: '';
       position: absolute;
       top: 0;
@@ -323,46 +333,101 @@
       transition: left 0.6s ease;
     }
 
-    .feature-card:hover::before {
+    .menu-item:hover::before {
       left: 100%;
     }
 
-    .feature-card:hover {
-      transform: translateY(-10px) scale(1.02);
+    .menu-item:hover {
+      transform: translateY(-8px) scale(1.02);
       box-shadow: var(--shadow-heavy);
       background: rgba(255, 255, 255, 0.95);
     }
 
-    .feature-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 1.5rem;
+    .menu-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
       filter: hue-rotate(10deg);
       transition: var(--transition);
     }
 
-    .feature-card:hover img {
-      transform: scale(1.1) rotate(5deg);
+    .menu-item:hover img {
+      transform: scale(1.15) rotate(10deg);
     }
 
-    .feature-card h3 {
-      font-size: 1.3rem;
+    .menu-item h3 {
+      font-size: 1.2rem;
       color: var(--secondary-color);
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       font-weight: 600;
     }
 
-    .feature-card p {
+    .menu-item p {
       color: var(--text-light);
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
-    /* Responsive grid for tablets and desktop */
-    @media (min-width: 768px) {
-      .feature-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
+    /* Customization banner */
+    .customization-banner {
+      background: var(--gradient-3);
+      color: var(--white);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      margin-top: 3rem;
+      box-shadow: var(--shadow-medium);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .customization-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      animation: float 15s ease-in-out infinite;
+    }
+
+    .customization-banner h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .customization-banner p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Responsive adjustments for menu */
+    @media (max-width: 767px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .menu-item {
+        padding: 1.5rem;
+      }
+
+      .customization-banner {
+        padding: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .customization-banner h3 {
+        font-size: 1.5rem;
+      }
+
+      .customization-banner p {
+        font-size: 1rem;
       }
     }
 
@@ -687,26 +752,6 @@
       font-weight: 500;
     }
 
-    /* .social-icon {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.8rem;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      transition: var(--transition);
-    }
-
-    .social-icon:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-3px) scale(1.1);
-    }
-
-    .social-icon img {
-      width: 35px;
-      height: 35px;
-      filter: brightness(0) invert(1);
-    } */
-
     /* ===== ANIMATIONS ===== */
     @keyframes fadeInUp {
       from {
@@ -754,16 +799,12 @@
         font-size: 1rem;
       }
 
-      .features h2,
+      .menu h2,
       .how-it-works h2,
       .gallery h2,
       .contact h2,
       .reviews h2 {
         font-size: 2rem;
-      }
-
-      .feature-card {
-        padding: 2rem 1.5rem;
       }
 
       .gallery-img {
@@ -841,7 +882,7 @@
       <!-- Navigation Menu -->
       <nav id="mobile-nav">
         <ul>
-          <li><a href="#features">Features</a></li>
+          <li><a href="#menu">Menu</a></li>
           <li><a href="#how">How It Works</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -860,31 +901,86 @@
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
     <div class="container">
-      <h2>Why Choose Us</h2>
-      <div class="feature-grid">
-        <!-- Feature Card 1 -->
-        <div class="feature-card fade-in">
-          <img src="https://img.icons8.com/?size=100&id=uVIEdWZSAVDE&format=png&color=000000" alt="Natural Yarn Icon">
-          <h3>Natural Yarns</h3>
-          <p>Soft-touch and eco-conscious materials that feel amazing against your skin and help protect our planet.</p>
+      <h2>Our Menu</h2>
+      <p class="menu-subtitle">Handcrafted items available for order</p>
+      <div class="menu-grid">
+        <!-- Menu Item 1 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000" alt="Keychain">
+          <h3>Keychains</h3>
+          <p>Adorable crocheted keychains to brighten up your keys</p>
         </div>
         
-        <!-- Feature Card 2 -->
-        <div class="feature-card fade-in">
-          <img src="https://img.icons8.com/?size=100&id=uVIEdWZSAVDE&format=png&color=000000" alt="Handcrafted Icon">
-          <h3>Handcrafted</h3>
-          <p>Every piece is lovingly created by skilled artisans with attention to detail and passion for the craft.</p>
+        <!-- Menu Item 2 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=11795&format=png&color=000000" alt="Bag Charms">
+          <h3>Bag Charms</h3>
+          <p>Beautiful charms to add personality to your favorite bags</p>
         </div>
         
-        <!-- Feature Card 3 -->
-        <div class="feature-card fade-in">
-          <img src="https://img.icons8.com/?size=100&id=uVIEdWZSAVDE&format=png&color=000000" alt="Made with Love Icon">
-          <h3>Made with Love</h3>
-          <p>Each item carries a unique story and personal touch that makes it special and meaningful.</p>
+        <!-- Menu Item 3 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=12580&format=png&color=000000" alt="Phone Charms">
+          <h3>Phone Charms</h3>
+          <p>Cute crocheted accessories for your mobile device</p>
         </div>
+        
+        <!-- Menu Item 4 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=85034&format=png&color=000000" alt="Flowers">
+          <h3>Flowers & Bouquets</h3>
+          <p>Individual flowers and beautiful bouquets that last forever</p>
+        </div>
+        
+        <!-- Menu Item 5 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=11818&format=png&color=000000" alt="Stuffed Toys">
+          <h3>Stuffed Toys</h3>
+          <p>Cuddly and soft amigurumi toys perfect for all ages</p>
+        </div>
+        
+        <!-- Menu Item 6 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=2888&format=png&color=000000" alt="Bookmarks">
+          <h3>Bookmarks</h3>
+          <p>Unique bookmarks for book lovers and avid readers</p>
+        </div>
+        
+        <!-- Menu Item 7 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=2787&format=png&color=000000" alt="Car Accessories">
+          <h3>Rear View Mirror Pendants</h3>
+          <p>Decorative pendants to personalize your car's interior</p>
+        </div>
+        
+        <!-- Menu Item 8 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=11976&format=png&color=000000" alt="Coasters">
+          <h3>Coasters</h3>
+          <p>Protective and stylish coasters for your home decor</p>
+        </div>
+        
+        <!-- Menu Item 9 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=11806&format=png&color=000000" alt="Lanyards">
+          <h3>Lanyards</h3>
+          <p>Comfortable and durable lanyards for ID cards and keys</p>
+        </div>
+        
+        <!-- Menu Item 10 -->
+        <div class="menu-item fade-in">
+          <img src="https://img.icons8.com/?size=100&id=11981&format=png&color=000000" alt="Hair Accessories">
+          <h3>Hair Accessories</h3>
+          <p>Beautiful hair clips, bands, and decorative accessories</p>
+        </div>
+      </div>
+      
+      <div class="customization-banner">
+        <h3>Customization Available</h3>
+        <p>All items can be personalized with your choice of colors, sizes, and special details to make them uniquely yours!</p>
       </div>
     </div>
   </section>
@@ -1306,28 +1402,6 @@
       }
     `;
     document.head.appendChild(style);
-
-    // ===== LAZY LOADING FOR IMAGES =====
-    // Add lazy loading to gallery images for better performance
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      });
-
-      // You can modify gallery images to use data-src for lazy loading
-      // document.querySelectorAll('.gallery-img[data-src]').forEach(img => {
-      //   imageObserver.observe(img);
-      // });
-    }
 
     // ===== ACCESSIBILITY IMPROVEMENTS =====
     // Add focus indicators for keyboard navigation
